@@ -35,5 +35,6 @@ public class Main {
 
         System.out.println("Total: " + total);
         System.out.println("Media: " + total / productos.size());
+        System.out.println("Máximo: " + precioMaximo);
     }
 }
