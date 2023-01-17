@@ -17,15 +17,9 @@ public class Main {
         p4.setPrecio(4.00);
         p5.setPrecio(3.00);
 
-        Producto productos[] = new Producto[5];
-        productos[0] = p1;
-        productos[1] = p2;
-        productos[2] = p3;
-        productos[3] = p4;
-        productos[4] = p5;
+        Producto productos[] = {p1, p2, p3, p4, p5};
 
-        double total = 0.0;
-        double precioMaximo = 0.00;
+        double total = 0, precioMaximo = 0;
         for(Producto p : productos)
         {
             total += p.getPrecio();
