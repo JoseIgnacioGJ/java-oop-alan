@@ -33,20 +33,29 @@ public class Main {
 
         Producto productos[] = {p1, p2, p3, p4, p5};
 
-        double total = 0, totalStock = 0, precioMaximo = 0;
+        double total = 0, totalStock = 0, precioMaximo = 0, precioMinimo = 0;
+
         int cantProductos = 0;
 
-        for(Producto p : productos)
+        for(int i = 0; i < productos.length; i++)
         {
-            if(p.getPrecio() != null && p.getaLaVenta()){
+            if(productos[i].getPrecio() != null && productos[i].getaLaVenta()){
 
-                cantProductos += p.getCantidad();
+                cantProductos += productos[i].getCantidad();
 
-                total += p.getPrecio();
-                totalStock += p.getPrecio() * p.getCantidad();
+                total += productos[i].getPrecio();
+                totalStock += productos[i].getPrecio() * productos[i].getCantidad();
 
-                if(precioMaximo < p.getPrecio())
-                    precioMaximo = p.getPrecio();
+                if(precioMaximo < productos[i].getPrecio())
+                    precioMaximo = productos[i].getPrecio();
+
+                if(i == 0)
+                    precioMinimo = productos[i].getPrecio();
+                else
+                {
+                    if(precioMinimo > productos[i].getPrecio())
+                        precioMinimo = productos[i].getPrecio();
+                }
             }
 
         }
@@ -55,6 +64,7 @@ public class Main {
         System.out.println("Total stock: " + totalStock);
         System.out.println("Media: " + total / productos.length);
         System.out.println("Media stock: " + totalStock / cantProductos);
+        System.out.println("Mínimo: " + precioMinimo);
         System.out.println("Máximo: " + precioMaximo);
     }
 }
