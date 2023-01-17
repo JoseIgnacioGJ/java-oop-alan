@@ -87,7 +87,7 @@ public class Producto {
                 ", precio=" + precio +
                 ", cantidad=" + cantidad +
                 ", descripcion='" + descripcion + '\'' +
-                ", fabricante=" + fabrAicante +
+                ", fabricante=" + fabricante +
                 ", aLaVenta=" + aLaVenta +
                 '}';
     }
