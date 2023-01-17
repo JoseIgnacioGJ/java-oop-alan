@@ -2,19 +2,33 @@ package com.example;
 
 public class Producto {
     private String nombre;
-    private String tipo;
+    private ProductoCategoria categoria;
     private Double precio;
     private Integer cantidad;
     private String descripcion;
 
+    private Fabricante fabricante;
+
+    private Boolean aLaVenta;
+
     public Producto() {}
 
-    public Producto(String nombre, String tipo, Double precio, Integer cantidad, String descripcion) {
+    public Producto(String nombre, ProductoCategoria categoria, Double precio, Integer cantidad, String descripcion, Fabricante fabricante, Boolean aLaVenta) {
         this.nombre = nombre;
-        this.tipo = tipo;
+        this.categoria = categoria;
         this.precio = precio;
         this.cantidad = cantidad;
         this.descripcion = descripcion;
+        this.fabricante = fabricante;
+        this.aLaVenta = aLaVenta;
+    }
+
+    public Fabricante getFabricante() {
+        return fabricante;
+    }
+
+    public void setFabricante(Fabricante fabricante) {
+        this.fabricante = fabricante;
     }
 
     public String getNombre() {
@@ -25,12 +39,12 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public String getTipo() {
-        return tipo;
+    public ProductoCategoria getCategoria() {
+        return categoria;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setCategoria(ProductoCategoria categoria) {
+        this.categoria = categoria;
     }
 
     public Double getPrecio() {
@@ -57,14 +71,24 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
+    public Boolean getaLaVenta() {
+        return aLaVenta;
+    }
+
+    public void setaLaVenta(Boolean aLaVenta) {
+        this.aLaVenta = aLaVenta;
+    }
+
     @Override
     public String toString() {
         return "Producto{" +
                 "nombre='" + nombre + '\'' +
-                ", tipo='" + tipo + '\'' +
+                ", categoria=" + categoria +
                 ", precio=" + precio +
                 ", cantidad=" + cantidad +
                 ", descripcion='" + descripcion + '\'' +
+                ", fabricante=" + fabrAicante +
+                ", aLaVenta=" + aLaVenta +
                 '}';
     }
 }
