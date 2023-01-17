@@ -26,11 +26,11 @@ public class Main {
 
         double total = 0.0;
         double precioMaximo = 0.00;
-        for(int i = 0; i < productos.length; i++)
+        for(Producto p : productos)
         {
-            total += productos[i].getPrecio();
-            if(precioMaximo < productos[i].getPrecio())
-                precioMaximo = productos[i].getPrecio();
+            total += p.getPrecio();
+            if(precioMaximo < p.getPrecio())
+                precioMaximo = p.getPrecio();
         }
 
         System.out.println("Total: " + total);
