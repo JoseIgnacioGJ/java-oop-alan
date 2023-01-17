@@ -13,9 +13,9 @@ public class Main {
 
         p1.setPrecio(1.00);
         p2.setPrecio(2.00);
-        p3.setPrecio(3.00);
+        p3.setPrecio(5.00);
         p4.setPrecio(4.00);
-        p5.setPrecio(5.00);
+        p5.setPrecio(3.00);
 
         ArrayList<Producto> productos = new ArrayList();
         productos.add(p1);
